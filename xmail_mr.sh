@@ -8,11 +8,15 @@
 #
 # Skript erfordert Xdialog & DisplayAusgabe.sh, bitte Anleitung beachten!
 #
-# SP (FW), Stand August 2013 (ß)
-# Änderungen:
-# Auswahlfenster für Email an Patient, H-Arzt oder Ü-Arzt
-# Position der Parameter ($PARAM$) in patienten$userid.txt wird vom Programm ermittelt
-# Emailadresse des Patienten wird im Emailfeld u. den nächsten 4 Feldern gesucht (kann in David vorkommen)
+# SP (FW), Stand August 2013
+#
+#
+# Aenderungen:
+# Auswahlfenster für Email an Patient, H-Arzt oder U-Arzt
+# Position der Parameter ($PARAM$) in patienten$userid.txt wird vom Programm
+# ermittelt.
+# Emailadresse des Patienten wird im Emailfeld u. den naechsten 4 Feldern
+# gesucht (kann in David vorkommen).
 #
 ##############################################################################
 
@@ -211,7 +215,7 @@ rm -f $mailtmp1
 
 # -----------------------------------------------------
 # Mailadressen-Auswahlfenster anzeigen
-Xdialog --cancel-label "Abbruch" --title "Faxnummer Auswahl" --menu "Mailadressen" 10 90 14 \
+Xdialog --cancel-label "Abbruch" --title "Auswahl treffen" --menu "Mailadressen" 10 90 14 \
 "Patient:    $pmail" "   $pname, $pvname, $port" \
 "H-Arzt :    $hmail" "   $hname, $hort" \
 "U-Arzt :    $umail" "   $uname, $uort" \
